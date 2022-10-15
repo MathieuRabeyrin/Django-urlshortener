@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    URL Shortener by Squalex
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>URL Shortener</h1>
+    </header>
+    <main>
+        <h2>Paste the URL to be shortened</h2>
+        <form method="POST">
+            <div class="input-group">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        {% if url %}
+            <div class="link">
+                <p><span>&#9989;</span><a href="{{ url }}" target="_blank">{{ url }}</a></p>
+            </div>
+        {% endif %}
+    </main>
+{% endblock %}
