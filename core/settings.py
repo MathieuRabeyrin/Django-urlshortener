@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_TOKEN = "f7Xe78TwLz*zbjqPR9@5rCS^zmTeoJFzbIt2Y7sPm&@5O2Ps@C"
+SECRET_KEY = "f7Xe78TwLz*zbjqPR9@5rCS^zmTeoJFzbIt2Y7sPm&@5O2Ps@C"
 
 """ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as file:
     SECRET_KEY = file.read().strip() """
